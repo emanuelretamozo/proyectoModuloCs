@@ -36,9 +36,11 @@ function hacer_busquedas() {
   
   for(let i = 0; i < personajes.length; i++) {
     html +=
-    `<div>Nombre: ${personajes[i].name}</div>
+    `<br>
+     <div class="results">Nombre: ${personajes[i].name}</div>
      <div>Color de pelo: ${personajes[i].hair_color}</div>
-     <div>Genero: ${personajes[i].gender}</div>`
+     <div>Genero: ${personajes[i].gender}</div>
+     <br>`
   }
   document.getElementById("resultado").innerHTML = html
 }
@@ -65,3 +67,5 @@ function hacer_busqueda() {
 
 
 //console.log("buscar_personajes()", buscar_personajes("L"))
+
+
