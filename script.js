@@ -15,13 +15,53 @@ function buscar_personaje(nombre) {
   }
 
 
+
+function buscar_personajes(nombre) {
+  let resultados = [];
+  for (let i = 0; i < json_file.results.length; i++) {
+    
+    if(json_file.results[i].name.slice(0, nombre.length) == nombre) {
+      resultados.push(json_file.results[i]);
+      }
+    }
+  return resultados;
+  }
+
+
+
+function hacer_busquedas() {
+  let nombre = document.getElementById("nombre_personaje").value
+  let personajes = buscar_personajes(nombre)
+  let html = " ";
+  
+  for(let i = 0; i < personajes.length; i++) {
+    html +=
+    `<div>Nombre: ${personajes[i].name}</div>
+     <div>Color de pelo: ${personajes[i].hair_color}</div>
+     <div>Genero: ${personajes[i].gender}</div>`
+  }
+  document.getElementById("resultado").innerHTML = html
+}
+
+
+
+
+
+
 function hacer_busqueda() {
   let nombre = document.getElementById("nombre_personaje").value
   let personaje = buscar_personaje(nombre)
   
-  let html = `<div>Nombre: ${personaje.name}</div><div>Color de pelo: ${personaje.hair_color}</div><div>Genero: ${personaje.gender}</div>`
+  console.log(nombre);
+  
+  
+  let html = `<div>Nombre: ${personaje.name}</div>
+              <div>Color de pelo: ${personaje.hair_color}</div>
+              <div>Genero: ${personaje.gender}</div>`
   
   document.getElementById("resultado").innerHTML = html
   
 }
 
+
+//console.log("buscar_personajes()", buscar_personajes("L"))
