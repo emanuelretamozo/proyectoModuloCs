@@ -2,19 +2,21 @@
 <html lang="en">
   <head>
   
-    <title>Hello World!</title>
+    <title>Star Wars Search Engine</title>
     
     <link rel="stylesheet" href="style.css" />
- 
+    
+  
   </head>
   <body>
 
     <h1>Busqueda de personajes de StarWars</h1>
     
-    <input id="nombre_personaje"/>
+    <input id="nombre_personaje" oninput="hacer_busquedas()"/>
     <button onclick="hacer_busqueda()">Buscar</button>
     <div id="resultado"></div>
-
+    
     <script type="text/javascript" src="script.js" defer></script>
   </body>
 </html>
+
