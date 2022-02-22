@@ -91,12 +91,20 @@ END Glitch hello-app default styles
 ******************************************************************************/
 
 body {
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/0/09/Luke_Skywalker_con_traje_de_piloto.jpg);
+  
   background-size: cover;
   background-color: var(--color-bg);
+  
   text-align: center;
   position: relative;
   
+}
+
+#imagen-fondo {
+  background-image:
+  linear-gradient(to left, rgba(255,255,0,0.7), rgba(0,0,255,0.5)),
+  url(https://upload.wikimedia.org/wikipedia/commons/0/09/Luke_Skywalker_con_traje_de_piloto.jpg);
+  opacity: 0.9;
 }
 
 /* Page structure */
@@ -170,25 +178,13 @@ input {
   top: 35%;
   left: 55%;
   margin: -40px 0 0 -25px; 
+  opacity: 0.9;
 }
 
 .more-button {
   width: 80%;
   background-color: #0b0b0b;
   color: white;
-}
-
-/* Interactive image */
-.illustration:active {
-  transform: translateY(5px);
-}
-
-/* Button dip
-- Toggling this class on and off will move it down and up again
-- The button transition property above determines the speed of the translate (500ms)
-*/
-.dipped {
-  transform: translateY(5px);
 }
 
 
@@ -212,7 +208,11 @@ input {
   }
   
   .div-h2 {
-    display: none;
+    position: absolute;
+    height: 200px;
+    top: 40%;
+    left: 30%;
+    margin: -40px 0 0 -25px; 
   }
   
   button {
@@ -226,3 +226,4 @@ input {
   }
 
 }
+
